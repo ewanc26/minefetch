@@ -34,6 +34,33 @@ class SysInfoReader(private val path: String) {
         }
     }
 
+    fun readAndRefresh(): HostInfo? {
+        requestRefresh()
+        pollForRefresh()
+        return readHostInfo()
+    }
+
+    private fun requestRefresh() {
+        val trigger = File(File(path).parentFile, ".refresh")
+        try {
+            trigger.createNewFile()
+        } catch (_: Exception) {
+        }
+    }
+
+    private fun pollForRefresh() {
+        val trigger = File(File(path).parentFile, ".refresh")
+        var attempts = 0
+        while (attempts < 20 && trigger.exists()) {
+            try {
+                Thread.sleep(250)
+            } catch (_: InterruptedException) {
+                break
+            }
+            attempts++
+        }
+    }
+
     private fun parseFastfetchJson(arr: JSONArray): HostInfo {
         val map = mutableMapOf<String, Any>()
         for (i in 0 until arr.length()) {

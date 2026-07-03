@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender
 class MinefetchCommand(private val plugin: MinefetchPlugin) : CommandExecutor {
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
-        val hostInfo = plugin.getHostInfo()
+        val hostInfo = plugin.getFreshHostInfo()
         val serverInfo = plugin.buildServerInfo()
 
         val accent = TextColor.color(0x00AAFF)

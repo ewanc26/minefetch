@@ -25,6 +25,8 @@ class MinefetchPlugin : JavaPlugin() {
 
     fun getHostInfo(): HostInfo? = sysInfoReader?.readHostInfo()
 
+    fun getFreshHostInfo(): HostInfo? = sysInfoReader?.readAndRefresh()
+
     fun buildServerInfo(): ServerInfo {
         val runtime = Runtime.getRuntime()
         val osBean = ManagementFactory.getOperatingSystemMXBean()
