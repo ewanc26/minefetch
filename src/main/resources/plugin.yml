@@ -1,0 +1,17 @@
+name: Minefetch
+version: '1.0.0'
+main: uk.ewancroft.minefetch.MinefetchPlugin
+api-version: '1.21'
+description: Displays host and container system information in-game.
+author: ewanc26
+
+commands:
+  minefetch:
+    description: Display system information.
+    aliases: [sysinfo]
+    permission: minefetch.use
+
+permissions:
+  minefetch.use:
+    description: Use /minefetch command.
+    default: true
