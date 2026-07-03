@@ -1,5 +1,5 @@
 name: Minefetch
-version: '1.0.0'
+version: '1.1.0'
 main: uk.ewancroft.minefetch.MinefetchPlugin
 api-version: '1.21'
 description: Displays host and container system information in-game.

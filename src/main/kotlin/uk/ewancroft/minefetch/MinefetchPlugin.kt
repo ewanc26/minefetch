@@ -3,6 +3,7 @@ package uk.ewancroft.minefetch
 import uk.ewancroft.minefetch.command.MinefetchCommand
 import uk.ewancroft.minefetch.util.HostInfo
 import uk.ewancroft.minefetch.util.SysInfoReader
+import uk.ewancroft.minefetch.util.UpdateChecker
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.NamedTextColor
 import net.kyori.adventure.text.format.TextColor
@@ -18,6 +19,7 @@ class MinefetchPlugin : JavaPlugin() {
         sysInfoReader = SysInfoReader("/sysinfo/host.json")
         val cmd = getCommand("minefetch") ?: return
         cmd.setExecutor(MinefetchCommand(this))
+        UpdateChecker(this, "ewanc26", "Minefetch").checkAsync()
         logger.info("Minefetch enabled.")
     }
 
