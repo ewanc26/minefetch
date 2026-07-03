@@ -1,0 +1,14 @@
+{
+  // Fastfetch config for Minefetch — only modules parsed by the plugin.
+  // Used via: fastfetch --config scripts/fastfetch-config.jsonc --format json
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "modules": [
+    "os",
+    "kernel",
+    "uptime",
+    "packages",
+    "cpu",
+    "memory",
+    "disk"
+  ]
+}
