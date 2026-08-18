@@ -106,6 +106,10 @@ class MinefetchCommand(private val plugin: MinefetchPlugin) : CommandExecutor {
 
         lines.add(Component.empty())
         lines.add(Component.text("═══════════════", dimColor))
+        lines.add(Component.text("Support:", labelColor)
+            .append(Component.text("  Ko-fi: https://ko-fi.com/ewancroft", dimColor)))
+        lines.add(Component.text("  ", labelColor)
+            .append(Component.text("GitHub Sponsors: https://github.com/sponsors/ewanc26", dimColor)))
 
         sender.sendMessage(Component.join(JoinConfiguration.newlines(), lines))
         return true
