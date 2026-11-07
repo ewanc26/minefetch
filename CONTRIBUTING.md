@@ -16,4 +16,4 @@
 
 ## Recent direction
 
-Recent commits: Sync AGENTS.md from zincfox; Sync CONTRIBUTING.md from zincfox; Sync CONTRIBUTING.md from zincfox; Update issue template: config.yml; Update issue template: documentation.yml
+Recent commits: Update issue template: config.yml; Update issue template: documentation.yml

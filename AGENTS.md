@@ -20,4 +20,4 @@ Guidance for AI coding agents working in **minefetch**.
 
 ## Recent history
 
-Sync AGENTS.md from zincfox; Sync CONTRIBUTING.md from zincfox; Sync CONTRIBUTING.md from zincfox; Update issue template: config.yml; Update issue template: documentation.yml
+Update issue template: config.yml; Update issue template: documentation.yml
