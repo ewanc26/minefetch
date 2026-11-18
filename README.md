@@ -22,3 +22,7 @@ Requires a JDK. The Gradle wrapper is included:
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Licence
+
+See [LICENSE](LICENSE) for the licence terms.
