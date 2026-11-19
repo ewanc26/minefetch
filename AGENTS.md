@@ -4,6 +4,8 @@ Guidance for AI coding agents working in **minefetch**.
 
 ## Project overview
 
+A Paper plugin that shows host system information in-game with `/minefetch` (alias `/sysinfo`).
+
 - Language: Kotlin
 - Default branch: main
 
