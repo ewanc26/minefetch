@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'io.papermc.paper:paper-api:26.1.2.build.72-stable'
+    compileOnly 'io.papermc.paper:paper-api:26.3.build.249-stable'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.3.21'
     implementation 'org.json:json:20250107'
 }
