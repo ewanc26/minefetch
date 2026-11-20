@@ -1,19 +1,28 @@
-# Contributing to minefetch
+# Contributing to Minefetch
 
+A Paper plugin that shows host system information in-game with `/minefetch` (alias `/sysinfo`). Thanks for wanting to help!
 
+## Getting started
 
-## Project context
+```bash
+./gradlew build
+```
 
-- Primary language: Kotlin
-- Default branch: main
+`scripts/install.sh [plugins-dir]` builds the plugin and copies it into a server's plugins folder.
 
-## Before submitting changes
+## Notes for this project
 
-- Read the README, manifests, and CI workflows before choosing commands.
-- Run the documented formatter, linter, build, and test checks relevant to your change.
-- Keep commits focused and explain compatibility or operational impact.
-- Open changes through a pull request with verification results.
+- **The plugin doesn't query the host itself.** `scripts/update-sysinfo.sh` (or `.ps1`) captures fastfetch output into a shared directory that gets mounted into the Minecraft container at `/sysinfo/host.json`. The plugin just reads that file — keep that separation; adding direct host access would break the container boundary it's designed around.
+- Built against Paper API 26.1.2, api-version 1.21; permission `minefetch.use` is granted to everyone by default — keep the command harmless without it.
+- Windows/macOS/Linux variants of the sysinfo script should stay in step: a change to the JSON shape must update all of them.
+- Test with a real `host.json` fixture; the plugin's whole world is one file read and a formatted command response.
 
-## Recent direction
+## Before opening a PR
 
-Recent commits: Update issue template: config.yml; Update issue template: documentation.yml
+- `./gradlew build` passes and you tested `/minefetch` on a Paper server with a mounted `host.json`.
+- Conventional commits; focused PRs; describe the test.
+- AI-assisted PRs welcome; stand behind every line and run the build yourself.
+
+## Licence
+
+See [LICENSE](LICENSE). Contributions accepted under the same terms.
