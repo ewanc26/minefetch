@@ -3,7 +3,7 @@
 A Paper plugin that shows host system information in-game with `/minefetch` (alias `/sysinfo`).
 
 - Permission: `minefetch.use` (granted to everyone by default).
-- Built against Paper API 26.1.2 and declares `api-version` 1.21.
+- Built against Paper API 26.3 and declares `api-version` 1.21.
 
 ## Host information
 
